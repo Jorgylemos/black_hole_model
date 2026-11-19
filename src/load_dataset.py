@@ -43,7 +43,7 @@ class LoadDataset():
                     self.samples.append((os.path.join(class_dir, file_name), label))
         
         self.converter = ConvertImage(samples=self.samples, transform=transform)
-        print(f"Amostras carregadas {len(self.samples)}")
+        print(f"Samples loaded {len(self.samples)}")
     
     def __len__(self):
         return len(self.samples)

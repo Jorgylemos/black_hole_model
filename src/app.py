@@ -22,10 +22,8 @@ def main():
         dataset_full = LoadDataset(data_root)
     
     if len(dataset_full) == 0:
-        print("Nenhuma imagem encontrada. Encerrando...")
+        print("Images not found. Finishing...")
         return
-
-    print("Carregado...")
 
 if __name__ == "__main__":
     main()
