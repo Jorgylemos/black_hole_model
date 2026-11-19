@@ -8,17 +8,22 @@ The idea is for the model to be able to distinguish between black holes, neutron
 
 ## How do I execute it?
 
-### 1. Enable venv environment
+### 1. Create venv environment
 ```
-$ source ./venv/bin/activate
+$ python3 -m venv .venv
 ```
 
-### 2. Install dependencies from requirements
+### 2. Enable venv environment
+```
+$ source ./.venv/bin/activate
+```
+
+### 3. Install dependencies from requirements
 ```
 $ pip install -r requirements.txt
 ```
 
-### 3. Execute script (empty is no arguments)
+### 4. Execute script (empty is no arguments)
 ```
 $ task start EMPTY | <DATASET_PATH>
 ```
