@@ -1,4 +1,5 @@
 import os
+import sys
 import torch
 from load_dataset import LoadDataset
 
@@ -7,8 +8,12 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device {device}")
 
+    # Use command: python3 src/app.py ./dataset
+    if len(sys.argv) > 1:
+        data_root = sys.argv[1]
+    else:
     # Dataset folder (in root)
-    data_root = "./dataset"
+        data_root = './dataset'
 
     if not os.path.exists(data_root):
        print(f"Creating folder {data_root}.")
